@@ -30,7 +30,7 @@ func handler(request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResp
 	if err != nil {
 		return &events.APIGatewayProxyResponse{
 			StatusCode: 200,
-			Body:       "No article should be index",
+			Body:       err.Error(),
 		}, nil
 	}
 
